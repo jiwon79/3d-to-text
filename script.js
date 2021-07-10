@@ -15,7 +15,8 @@ box.addEventListener("mousedown", (e) => {
     originX = e.clientX;
     originY = e.clientY;
     originLeft = box.offsetLeft;
-    orginTop = box.offsetTop;
+    originTop = box.offsetTop;
+    console.log(originLeft, originTop);
 });
 
 document.addEventListener("mouseup", (e) => {
