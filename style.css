@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.area {
+    width: 1200px;
+    height: 800px;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.area__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    cursor: pointer;
+}
