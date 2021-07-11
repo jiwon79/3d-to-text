@@ -11,11 +11,20 @@ body {
     flex-direction: column;
 }
 
+.area_display {
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    position: relative;
+}
+
 .area {
     width: 100%;
     height: 90%;
-    background-color: rgba(0,0,0,0.2);
-    position: relative;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.3);
+    position: absolute;
 }
 
 table {
