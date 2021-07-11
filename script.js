@@ -5,16 +5,16 @@ let isDragging = null;
 let originX = null;
 let originY = null;
 
-const WIDTH = 20;
-const HEIGHT = 20;
+const WIDTH = 40;
+const HEIGHT = 30;
 
-for (var i=0; i<WIDTH; i++) {
-    var th = document.createElement('th');
-    display.appendChild(th);
-    for (var j=0; j<HEIGHT; j++) {
-        var tr = document.createElement('tr');
-        th.appendChild(tr);
-        tr.innerHTML = '0';
+for (var i=0; i<HEIGHT; i++) {
+    var tr = document.createElement('tr');
+    display.appendChild(tr);
+    for (var j=0; j<WIDTH; j++) {
+        var td = document.createElement('td');
+        tr.appendChild(td);
+        td.innerHTML = '#';
     }
 }
 
