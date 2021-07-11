@@ -18,6 +18,23 @@ body {
     position: relative;
 }
 
+table {
+    font-size: 20px;
+    border-collapse: collapse;
+    border: 1px solid #222222;
+    line-height: 80%;
+}
+
+tr {
+    margin-top: -10px;
+}
+td {
+    width: 13px;
+    height: 18px;
+    text-align: center;
+    vertical-align: center;
+}
+
 .text {
     display: flex;
 }
