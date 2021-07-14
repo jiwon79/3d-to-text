@@ -15,7 +15,8 @@ body {
     width: 100%;
     height: 90%;
     z-index: 1;
-    background-color: #F2E3DA;
+    background-color: #1d1b1b;
+    color : #FFF;
     position: relative;
 }
 
@@ -37,7 +38,7 @@ tr {
     margin-top: -10px;
 }
 td {
-    width: 13px;
+    width: 18px;
     height: 18px;
     text-align: center;
     vertical-align: center;
