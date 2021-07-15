@@ -12,9 +12,9 @@ const HEIGHT = 40;
 
 const THETA_NUM = 100;
 const PHI_NUM = 100;
-const a = 5;
+const a = 6;
 const b = 14;
-const LIGHT = unit([0,1,1]);
+const LIGHT = unit([0,0,1]);
 const CHAR = ['.', ',', '-', '~', ':', ';', '=', '!', '*', '#', '$', '@']
 
 var rotateX = 0;

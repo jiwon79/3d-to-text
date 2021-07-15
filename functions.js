@@ -1,3 +1,4 @@
+//////////////////////////// Vector Function ///////////////////////////
 // Calculate vector magnitude
 function magnitude(vec) {
     result = 0;
@@ -32,6 +33,7 @@ function dotProduct(vec1, vec2) {
     return result
 }
 
+//////////////////////////// Matrix Function ///////////////////////////
 // Create 2 dimention array
 function create2DArray(rows, columns) {
     var arr = new Array(rows);
@@ -40,6 +42,13 @@ function create2DArray(rows, columns) {
         arr[i].fill(-Infinity);
     }
     return arr;
+}
+
+// Create -Infinity 2D array
+function clear2DArray(array) {
+    for (var i=0; i<array.length; i++) {
+        array[i].fill(-Infinity);
+    }
 }
 
 // Create rotate matrix by theta
@@ -59,17 +68,13 @@ function rotateMatrixByZ(theta) {
     ]);
 }
 
+//////////////////////// Display Draw Function ///////////////////////
+// Clear table by blank space
 function clearDisplay() {
     for (var i=1; i<WIDTH+1; i++) {
         for (var j=1; j<WIDTH+1; j++) {
             document.querySelector('table tr:nth-child('+String(i)+') td:nth-child('+String(j)+')').innerHTML = " ";
         }
-    }
-}
-
-function clear2DArray(array) {
-    for (var i=0; i<array.length; i++) {
-        array[i].fill(-Infinity);
     }
 }
 
@@ -90,27 +95,30 @@ function drawDonut() {
                 M.cos(theta)*M.sin(phi), 
                 M.sin(theta)
             ]);
+            rotateMatX = roateMatrixByX(rotateX);
+            rotateMatZ = rotateMatrixByZ(rotateZ);
+            r = m.multiply(m.matrix(r), rotateMatX, rotateMatZ)._data;
+            normal = m.multiply(m.matrix(normal), rotateMatX, rotateMatZ)._data;
             
-            r = m.multiply(m.matrix(r), roateMatrixByX(rotateX), rotateMatrixByZ(rotateZ))._data;
-            normal = m.multiply(m.matrix(normal), roateMatrixByX(rotateX), rotateMatrixByZ(rotateZ))._data;
-            
-            luminance = (luminance+12)/12;
-            var luminance = M.floor(dotProduct(normal, LIGHT)*12);
-    
+            var luminance = dotProduct(normal, LIGHT);
+            var c = r[2]/(a+b);
+            luminance = Math.max(0, Math.floor(1+7.9*luminance+2.9*c));
+
+
             r = [
                 M.floor(r[0]+WIDTH/2),
                 M.floor(r[1]+HEIGHT/2),
                 r[2] = M.floor(r[2])
             ];
             // && zArray[r[0]][r[1]]<r[2]
-            if (0<r[0] && r[0]<HEIGHT && 0<r[1] && r[1]<WIDTH && luminance>=0 && zArray[r[0]][r[1]]<r[2]) {
+            if (0<r[0] && r[0]<HEIGHT && 0<r[1] && r[1]<WIDTH && zArray[r[0]][r[1]]<r[2]) {
                 zArray[r[0]][r[1]] = r[2];
                 if (CHAR[luminance] == undefined) {
                     console.log(r, luminance);
                 }
-                document.querySelector('table tr:nth-child('+String(r[0])+') td:nth-child('+String([r[1]])+')').innerHTML = CHAR[luminance];
-            }
-            
+                textField = document.querySelector('table tr:nth-child('+String(r[0])+') td:nth-child('+String([r[1]])+')');
+                textField.innerHTML = CHAR[luminance];
+            }  
         }
     }
 }
