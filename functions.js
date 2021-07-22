@@ -102,16 +102,17 @@ function drawDonut() {
             
             var luminance = dotProduct(normal, LIGHT);
             var c = r[2]/(a+b);
-            luminance = Math.max(0, Math.floor(1+7.9*luminance+2.9*c));
-
-
+            luminance = Math.floor(1+7.9*luminance+2.9*c);
+            luminance = Math.max(0, luminance);
+            
             r = [
                 M.floor(r[0]+WIDTH/2),
                 M.floor(r[1]+HEIGHT/2),
                 r[2] = M.floor(r[2])
             ];
+            
             // && zArray[r[0]][r[1]]<r[2]
-            if (0<r[0] && r[0]<HEIGHT && 0<r[1] && r[1]<WIDTH && zArray[r[0]][r[1]]<r[2]) {
+            if (0<r[0] && r[0]<HEIGHT && 0<r[1] && r[1]<WIDTH && zArray[r[0]][r[1]]<=r[2]) {
                 zArray[r[0]][r[1]] = r[2];
                 if (CHAR[luminance] == undefined) {
                     console.log(r, luminance);
