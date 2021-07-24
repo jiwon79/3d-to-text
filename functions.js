@@ -72,16 +72,16 @@ function rotateMatrixByZ(theta) {
 function SetValueA() {
   let slider = document.querySelector('#sliderA')
   a = parseInt(slider.value);
-  clearDisplay()
-  drawDonut()
-}
+  clearDisplay();
+  clear2DArray(zArray);
+  drawDonut();}
 
 function SetValueB() {
   let slider = document.querySelector('#sliderB')
   b = parseInt(slider.value);
   clearDisplay();
-  drawDonut();
-}
+  clear2DArray(zArray);
+  drawDonut();}
 
 /////////////////////////// Buttons Function /////////////////////////
 function buttonRotate(direction) {
