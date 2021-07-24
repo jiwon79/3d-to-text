@@ -14,16 +14,30 @@
     <div class="header">
       <p>3D to Text visualizing</p>
     </div>
-    <p>3차원 도형을 text로 보여줍니다.</p>
-    <p>마우스 이동키를 눌러보세요!</p>
-    
-    <div class="sliderContainer">
-      <p>Minor Radius</p>
-      <input type="range" min="1" max="10" value="6" class="slider" id="sliderA" onchange="SetValueA()">
-    </div>
-    <div class="sliderContainer">
-      <p>Major Radius</p>
-      <input type="range" min="1" max="20" value="14" class="slider" id="sliderB" onchange="SetValueB()">
+
+    <div class="container">
+      <div class="explain">  
+        <p>3차원 도형을 text로 보여줍니다.</p>
+        <p>마우스 이동키를 눌러보세요!</p>  
+      </div>
+  
+      <div class="sliderContainer">
+        <div class="sliderItem">
+          <p>Minor Radius</p>
+          <input type="range" min="1" max="10" value="6" class="slider" id="sliderA" onchange="SetValueA()">
+        </div>
+        <div class="sliderItem">
+          <p>Major Radius</p>
+          <input type="range" min="1" max="20" value="14" class="slider" id="sliderB" onchange="SetValueB()">
+        </div>
+      </div>
+  
+      <div class="buttons">
+        <button class="key_button">up</button>
+        <button class="key_button">down</button>
+        <button class="key_button">left</button>
+        <button class="key_button">right</button>
+      </div>
     </div>
 
     <div class="area_display">

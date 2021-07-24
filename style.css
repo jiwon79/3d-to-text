@@ -19,20 +19,56 @@ body {
 
 .header {
   width: 100%;
+  margin: 0 0 10px 0;
   padding: 8px 0 8px 0;
   font-size: 2em;
   text-align: center;
   background-color: #ef9e9f;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 10px 0;
+  padding: 0 15px 0 15px;
+}
+
+.explain {
+  width: 100%;
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
 .sliderContainer {
   display: flex;
+  flex-direction: column;
+}
+
+.sliderItem p {
+  margin: 0 14px 5px 0;
+}
+
+.sliderItem {
+  display: flex;
+}
+
+.buttons {
+  position: relative;
+}
+
+.key_button {
+  width: 50px;
+  height: 40px;
+  font-size: 16px;
 }
 
 .area_display {
     width: 100%;
     height: 90%;
     z-index: 1;
+    margin: 0 0 10px 0;
     background-color: #1d1d1d;
     color : #FFF;
     position: relative;
@@ -63,7 +99,7 @@ td {
 }
 
 .kakao_ad {
-  margin: 0 auto;
+  margin: 0 auto 5px auto;
 }
 
 .footer {
@@ -72,5 +108,5 @@ td {
 }
 
 .footer p {
-  margin-top: 6px;
+  margin-top: 4px;
 }
