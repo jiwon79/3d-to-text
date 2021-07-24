@@ -79,10 +79,25 @@ function SetValueA() {
 function SetValueB() {
   let slider = document.querySelector('#sliderB')
   b = parseInt(slider.value);
-  clearDisplay()
-  drawDonut()
+  clearDisplay();
+  drawDonut();
 }
 
+/////////////////////////// Buttons Function /////////////////////////
+function buttonRotate(direction) {
+  if (direction == "up") {
+    rotateZ += 0.1*Math.PI;
+  } else if (direction == "down") {
+    rotateZ -= 0.1*Math.PI;
+  } else if (direction == "left") {
+    rotateX -= 0.1*Math.PI;
+  } else if (direction == "right") {
+    rotateX += 0.1*Math.PI;
+  }
+  clearDisplay();
+  clear2DArray(zArray);
+  drawDonut();
+}
 
 //////////////////////// Display Draw Function ///////////////////////
 // Clear table by blank space
