@@ -9,6 +9,8 @@ let originY = null;
 
 const WIDTH = 40;
 const HEIGHT = 40;
+const tdWidth = 18;
+const tdHeight = 18;
 
 const THETA_NUM = 100;
 const PHI_NUM = 100;
@@ -28,6 +30,8 @@ for (var i=0; i<HEIGHT; i++) {
     display.appendChild(tr);
     for (var j=0; j<WIDTH; j++) {
         var td = document.createElement('td');
+        td.style.width = tdWidth+'px';
+        td.style.height = tdHeight+'px';
         tr.appendChild(td);
         td.innerHTML = ' ';
     }
