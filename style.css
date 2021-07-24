@@ -10,9 +10,11 @@
 
 body {
     width: 100%;
+    min-width: 728px;
     height: 100%;
     display: flex;
     flex-direction: column;
+    background-color: #fff;
 }
 
 .header {
@@ -20,14 +22,14 @@ body {
   padding: 8px 0 8px 0;
   font-size: 2em;
   text-align: center;
-  background-color: #D499B9;
+  background-color: #ef9e9f;
 }
 
 .area_display {
     width: 100%;
     height: 90%;
     z-index: 1;
-    background-color: #1d1b1b;
+    background-color: #1d1d1d;
     color : #FFF;
     position: relative;
 }
@@ -56,10 +58,15 @@ td {
     vertical-align: center;
 }
 
-.text {
-    display: flex;
+.kakao_ad {
+  margin: 0 auto;
 }
 
-.text p {
-    margin-right: 10px;
+.footer {
+  text-align: center;
+  background-color: #a3c9c7;
+}
+
+.footer p {
+  margin-top: 6px;
 }
