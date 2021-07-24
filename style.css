@@ -25,6 +25,10 @@ body {
   background-color: #ef9e9f;
 }
 
+.sliderContainer {
+  display: flex;
+}
+
 .area_display {
     width: 100%;
     height: 90%;

@@ -68,6 +68,22 @@ function rotateMatrixByZ(theta) {
     ]);
 }
 
+////////////////////////// set Value Function /////////////////////////
+function SetValueA() {
+  let slider = document.querySelector('#sliderA')
+  a = parseInt(slider.value);
+  clearDisplay()
+  drawDonut()
+}
+
+function SetValueB() {
+  let slider = document.querySelector('#sliderB')
+  b = parseInt(slider.value);
+  clearDisplay()
+  drawDonut()
+}
+
+
 //////////////////////// Display Draw Function ///////////////////////
 // Clear table by blank space
 function clearDisplay() {

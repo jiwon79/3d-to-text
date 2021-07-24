@@ -14,8 +14,9 @@ const tdHeight = 18;
 
 const THETA_NUM = 100;
 const PHI_NUM = 100;
-const a = 6;
-const b = 14;
+var a = 6;
+var b = 14;
+console.log(a, b);
 const LIGHT = unit([0,0,1]);
 const CHAR = ['.', ',', '-', '~', ':', ';', '=', '!', '*', '#', '$', '@']
 
@@ -75,3 +76,5 @@ document.addEventListener("keydown", (e) => {
     clear2DArray(zArray);
     drawDonut();
 });
+
+drawDonut();
