@@ -1,7 +1,7 @@
-<img width="600" src="https://user-images.githubusercontent.com/59159410/157898047-e657c4fc-94ca-4f86-bcfc-f56e42ddf6c7.png"></img>
-
 # 3d-to-text
 3D 물체인 도넛을 특수문자를 사용해서 보여주는 서비스입니다
+
+<img width="500" src="https://user-images.githubusercontent.com/59159410/157898047-e657c4fc-94ca-4f86-bcfc-f56e42ddf6c7.png"></img>
 
 ## Introduction
 ### Project Schedule
@@ -28,3 +28,10 @@ Minor Radius는 도넛 내부 반지름을 Major Radius는 도넛의 외부 반�
 기본적으로 방향키를 사용해서 도넛을 회전시킬 수 있습니다.\
 상하좌우 방향키 한 번에 15도 만큼 화전합니다.\
 모바일의 경우에서는 오른쪽 상단의 up, down, left, right 버튼을 사용해서 회전시킬 수 있습니다.
+
+## Contact
+수정할 것이 있다면 pull & request로, 문의할 것이 있다면 아래의 이메일로 연락 부탁드립니다.\
+mail: jiiwon79@gmail.com
+
+## License
+This project is licensed under the terms of the MIT license.
